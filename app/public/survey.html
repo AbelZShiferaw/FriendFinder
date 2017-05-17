@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <!--mobile responsivenss -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- added css styling sheet -->
+    <link href="./assets/bulma-0.3.1/css/bulma.css" rel="stylesheet">
+    <link href="./assets/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="./assets/css/styles.css" rel="stylesheet">
+  	<title>Friend Finder</title>
+</head>
+<body>
+	<section class="hero is-info has-text-centered">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title is-1">Survey Questions</h1>
+                <h2 class="subtitle is-4">
+                    Friend Finder
+                </h2>
+            </div>
+        </div>
+    </section>
+    <div class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+        </div>
+        <button class="modal-close"></button>
+    </div>
+
+    <section id="surveyQuestions" class="section">
+        <div class="columns">
+            <div class="column is-8 is-offset-2">
+                <form action='/api/friends' method="POST">
+                 <!--<form>-->
+                <label class="label">Name (required)</label>
+                <p class="control">
+                    <input class="input" type="text" placeholder="Name" name="userName" id="nameInput">
+                </p>
+                <label class="label">Link To Photo (required)</label>
+                <p class="control">
+                    <input class="input" type="text" placeholder="URL" name="picUrl" id="photo">
+                </p>
+                <hr>
+                <h3><strong>Question 1</strong></h3>
+                <label class="label">1. You enjoy going to the Gym.</label>
+                <p class="control" id="q1">
+                    <span class="select">
+                        <select name="scores">
+
+                        <option value="1">1 (strongly disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (strongly agree)</option>
+                        </select>
+                    </span>
+                </p>
+
+                <h3><strong>Question 2</strong></h3>
+                <label class="label">2. You like reading books.</label>
+                <p class="control" id="q2">
+                    <span class="select">
+                        <select name="scores">
+                   <option value="1" >1 (strongly disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (strongly agree)</option>
+                        </select>
+                    </span>
+                </p>
+
+                <h3><strong>Question 3</strong></h3>
+                <label class="label">3. You watch football.</label>
+                <p class="control" id="q3">
+                    <span class="select">
+                        <select name="scores">
+                        <option value="1">1 (strongly disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (strongly agree)</option>
+                        </select>
+                    </span>
+                </p>
+
+                 <h3><strong>Question 4</strong></h3>
+                 <label class="label">4. You like travelling.</label>
+                <p class="control" id="q4">
+                    <span class="select">
+                        <select name="scores">
+                        <option value="1">1 (strongly disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (strongly agree)</option>
+                        </select>
+                    </span>
+                </p>
+
+                 <h3><strong>Question 5</strong></h3>
+                 <label class="label">5. You like watching the news.</label>
+                <p class="control" id="q5">
+                    <span class="select">
+                        <select name="scores">
+                        <option value="1">1 (strongly disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (strongly agree)</option>
+                        </select>
+                    </span>
+                </p>
+
+                 <h3><strong>Question 6</strong></h3>
+                 <label class="label">6. You follow politics closely.</label>
+                <p class="control" id="q6">
+                    <span class="select">
+                        <select name="scores">
+                        <option value="1">1 (strongly disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (strongly agree)</option>
+                        </select>
+                    </span>
+                </p>
+
+                <h3><strong>Question 7</strong></h3>
+                 <label class="label">7. You like going to clubs.</label>
+                <p class="control" id="q7">
+                    <span class="select">
+                        <select name="scores">
+                        <option value="1">1 (strongly disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (strongly agree)</option>
+                        </select>
+                    </span>
+                </p>
+
+                <h3><strong>Question 8</strong></h3>
+                 <label class="label">8. You like trying out new foods.</label>
+                <p class="control" id="q8">
+                    <span class="select">
+                        <select name="scores">
+                        <option value="1">1 (strongly disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (strongly agree)</option>
+                        </select>
+                    </span>
+                </p>
+
+                <h3><strong>Question 9</strong></h3>
+                 <label class="label">9. You are a vegetarian.</label>
+                <p class="control" id="q9">
+                    <span class="select">
+                        <select name="scores">
+                        <option value="1">1 (strongly disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (strongly agree)</option>
+                        </select>
+                    </span>
+                </p>
+
+                <h3><strong>Question 10</strong></h3>
+                 <label class="label">10. You enjoy going for a walk.</label>
+                <p class="control" id="q10">
+                    <span class="select">
+                        <select name="scores">
+                        <option value="1">1 (strongly disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (strongly agree)</option>
+                        </select>
+                    </span>
+                </p>
+                <hr>
+
+                <button type="submit" class="button is-info" id="surveySubmit">Submit</button>
+                </form>
+            </div>
+            
+        </div>
+        
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="content has-text-centered">
+                <p>
+                    <strong>Friend Finder</strong> by Abel Zerihun
+                </p>
+                <p>
+                    <a class="button" href="https://github.com/abeeju" target="_blank">
+                        <span class="icon">
+                        <i class="fa fa-github"></i>
+                    </span>
+                        <span>GitHub</span>
+                    </a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
+    <script type="text/javascript">
+    <script type="text/javascript">
+
+    	var config = {
+      '.chosen-select'           : {},
+      '.chosen-select-deselect'  : {allow_single_deselect:true},
+      '.chosen-select-no-single' : {disable_search_threshold:10},
+      '.chosen-select-no-results': {no_results_text:'Oops, nothing found!'},
+      '.chosen-select-width'     : {width:"95%"}
+    };
+    
+    for (var selector in config) {
+      $(selector).chosen(config[selector]);
+    }
+    $("#submit").on("click", function(){
+    	function validateForm() {
+		  var isValid = true;
+		  $('.form-control').each(function() {
+		    if ( $(this).val() === '' )
+		        isValid = false;
+		  });
+		  $('.chosen-select').each(function() {
+		  	if( $(this).val() === ""){
+		  		isValid = false;
+		  	}
+		  });
+		  return isValid;
+		}
+		if (validateForm() == true)
+		{
+	    	var userData = {
+	    		name: $("#name").val(),
+	    		photo: $("#photo").val(),
+	    		scores: [
+	    		$("#q1").val(), 
+	    		$("#q2").val(), 
+	    		$("#q3").val(), 
+	    		$("#q4").val(), 
+	    		$("#q5").val(), 
+	    		$("#q6").val(), 
+	    		$("#q7").val(), 
+	    		$("#q8").val(), 
+	    		$("#q9").val(), 
+	    		$("#q10").val(), ]
+	    	}
+	    	
+	    	var currentURL = window.location.origin;
+	    	
+ 
+	    	$.post(currentURL + "/api/friends", userData, function(data){
+	    		
+	    		
+	    		$("#matchName").text(data.name);
+	    		$('#matchImg').attr("src", data.photo);
+		    	$("#resultsModal").modal('toggle');
+	    	});
+		}
+		else{
+			
+			alert("Please fill out all fields before submitting!");
+			}
+    	
+    	return false;
+    });
+
+    </script>
+
+</body>
+</html>
